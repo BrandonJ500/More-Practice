@@ -34,9 +34,10 @@ btn.addEventListener('click', () => {
 
        //sets every dynamically generated buttons id to nBtn
        newBtn.setAttribute("id", "nBtn");
-
+       newBtn.style.backgroundColor = rand();
        //appends the button to the next section
        Nsec.appendChild(newBtn);
     }
+
 
 } )
