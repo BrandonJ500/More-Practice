@@ -1,0 +1,18 @@
+//selects button from the id
+const btn = document.querySelector('#btn');
+
+//random color generator
+//random number generator between 0 and 255
+const rand = () => {
+    const r = Math.floor((Math.random() * 255) + 1);
+    const g = Math.floor((Math.random() * 255) + 1);
+    const b = Math.floor((Math.random() * 255) + 1);
+
+    //returns and rgb color 
+    return `rgb(${r},${g},${b})`
+}
+
+
+btn.addEventListener('click', () => {
+    
+} )
