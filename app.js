@@ -16,15 +16,23 @@ const rand = () => {
 //saves the number in userPrompt
 let userPompt = prompt("How many buttons to you want to create?");
 
+//used to change the prompt into an int
+//so we can add to our counter
+let newUser = parseInt(userPompt);
 //buttons append to new section
 const Nsec = document.querySelector("#newSec");
 
+//counter for total number of buttons
+let total = 0;
+
+//used to output the number of buttons
+const h3 = document.querySelector("h3");
 //adds buttons when clicked 
 btn.addEventListener('click', () => {
   
     //dynamically creates buttons based 
     //on how many the user specifies 
-    for(let i = 0; i < userPompt;  i++){
+    for(let i = 0; i < newUser;  i++){
 
         //creates the new button
        const newBtn = document.createElement("button");
@@ -38,6 +46,9 @@ btn.addEventListener('click', () => {
        //appends the button to the next section
        Nsec.appendChild(newBtn);
     }
+    total = total + newUser;
+    h3.innerText = `Number of buttons: ${total}`
+
 
 
 } )
@@ -46,11 +57,17 @@ const reset = document.querySelector("#reset");
 
 //resets all dynamically generatored buttons
 reset.addEventListener("click", () => {
+    //gets all dynamically generatored buttons by id 
     const allDBtns = document.querySelectorAll("#nBtn");
 
+    //loops over all dyn buttons
     for(let b of allDBtns){
+
+        //deletes them
         b.remove();
     }
+    total = 0;
+    h3.innerText = `Number of buttons: ${total}`
 })
 
 

@@ -16,6 +16,10 @@ section {
     flex-wrap: wrap;
 }
 
+h3 {
+    font-size: 50px;
+}
+
 #reset {
     color: red;
 }
