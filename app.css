@@ -2,7 +2,16 @@ h1 {
     color: green;
     text-align: center;
 }
+
+h2 {
+    color: blue;
+    text-align: center;
+}
+/* puts buttons in the middle of the screen
+   wraps buttons around */
 section {
-   display: flex;
+
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
