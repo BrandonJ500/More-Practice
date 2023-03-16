@@ -42,4 +42,15 @@ btn.addEventListener('click', () => {
 
 } )
 
+const reset = document.querySelector("#reset");
+
+//resets all dynamically generatored buttons
+reset.addEventListener("click", () => {
+    const allDBtns = document.querySelectorAll("#nBtn");
+
+    for(let b of allDBtns){
+        b.remove();
+    }
+})
+
 
