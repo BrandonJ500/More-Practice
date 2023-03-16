@@ -68,6 +68,8 @@ reset.addEventListener("click", () => {
     }
     total = 0;
     h3.innerText = `Number of buttons: ${total}`
+    const nPrompt = prompt("How many buttons would you like to make?")
+    newUser = parseInt(nPrompt);
 })
 
 
